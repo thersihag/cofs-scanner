@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>WaterLand - Water Park Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+     <!-- Modal Section -->
+<section>
+  
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2></h2>
+        <button class="close-btn" onclick="closeModal()">×</button>
+      </div>
+      <p>Design by Parul</p>
+      <div class="modal-footer">
+        <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+       
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Modal Styling */
+    .modal {
+      display: flex; /* Changed to flex to show modal on page load */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .modal-header h2 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #555;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .cancel-btn, .submit-btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .cancel-btn {
+      background-color: #ccc;
+      color: #333;
+    }
+
+    .cancel-btn:hover {
+      background-color: #bbb;
+    }
+
+    .submit-btn {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    button {
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+  </style>
+
+  <script>
+    // Function to open modal (kept for manual button click)
+    function openModal() {
+      document.getElementById('myModal').style.display = 'flex';
+    }
+
+    // Function to close modal
+    function closeModal() {
+      document.getElementById('myModal').style.display = 'none';
+    }
+
+    // Show modal on page load
+    window.onload = function() {
+      document.getElementById('myModal').style.display = 'flex';
+    };
+  </script>
+</section>
+
+        <!-- Carousel Start -->
+      <div class="header-carousel owl-carousel">
+    <div class="header-carousel-item">
+        <img src="img/fisheries-1.jpg" class="img-fluid w-100" alt="Fisheries Policy">
+        <div class="carousel-caption">
+            <div class="container align-items-center py-4">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-7 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
+                        <div class="text-start">
+                            <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome to Fisheries Governance</h4>
+                            <h1 class="display-4 text-uppercase text-white mb-4">Driving Sustainable Fisheries in India</h1>
+                            <p class="mb-4 fs-5">Explore how public administration and policies like the National Fisheries Policy 2020 and PMMSY promote sustainable fishing, aquaculture, and livelihoods for millions of fishers across India.</p>
+                            <div class="d-flex flex-shrink-0">
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-carousel-item">
+        <img src="img/fisheries-2.jpg" class="img-fluid w-100" alt="Aquaculture Development">
+        <div class="carousel-caption">
+            <div class="container py-4">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-7 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
+                        <div class="text-start">
+                            <h4 class="text-primary text-uppercase fw-bold mb-4">Empowering Aquaculture</h4>
+                            <h1 class="display-4 text-uppercase text-white mb-4">Building a Sustainable Future</h1>
+                            <p class="mb-4 fs-5">Learn how the Department of Fisheries supports cooperatives, infrastructure, and innovation to enhance fish production and ensure environmental sustainability under CRZ regulations.</p>
+                            <div class="d-flex flex-shrink-0">
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Carousel End -->
+
+
+
+
+<!-- Governance & Management Section Start -->
+<section class="container-fluid py-5" style="background-color: #1a2b4c; color: #ffffff;">
+    <div class="container py-5">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+            <h2 class="text-primary mb-3" style="font-size: 2.5rem; font-weight: bold;">Governance & Management Excellence</h2>
+            <p class="lead" style="color: #d1d8e0; max-width: 700px; margin: 0 auto;">
+                Discover the core principles and practices of public administration and enterprise management that drive efficient governance, sustainable development, and success in public and private sectors, including fisheries governance.
+            </p>
+        </div>
+        <!-- Content Cards -->
+        <div class="row g-4">
+            <!-- Public Administration Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm" style="background-color: #ffffff; color: #333333; border-radius: 10px; padding: 20px;">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-gavel fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-center mb-3" style="font-size: 1.75rem; font-weight: 600;">Public Administration</h3>
+                        <p class="card-text">
+                            Public administration is the implementation of government policy and the management of public affairs, both as an academic discipline and a practical field. It involves planning, organizing, directing, coordinating, and controlling government operations to ensure effective service delivery.
+                        </p>
+                        <h5 class="mt-4 mb-2" style="font-weight: 600;">Objectives</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Implement government policies</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Deliver public services</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Ensure accountability and transparency</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Promote social welfare and development</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Maintain law and order</li>
+                        </ul>
+                        <h5 class="mt-4 mb-2" style="font-weight: 600;">Functions</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Policy Implementation:</strong> Executing laws and decisions</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Resource Management:</strong> Managing finances, staff, and materials</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Public Service Delivery:</strong> Providing health, education, sanitation</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Regulatory Function:</strong> Enforcing rules and regulations</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Developmental Function:</strong> Promoting economic and social growth</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Principles of Organization Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm" style="background-color: #ffffff; color: #333333; border-radius: 10px; padding: 20px;">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-sitemap fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-center mb-3" style="font-size: 1.75rem; font-weight: 600;">Principles of Organization</h3>
+                        <p class="card-text">
+                            Organizational principles are vital for structuring institutions effectively, guiding task division, coordination, and management to achieve goals efficiently in both public and private sectors, including fisheries governance.
+                        </p>
+                        <h5 class="mt-4 mb-2" style="font-weight: 600;">Core Principles</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Division of Work:</strong> Enhances efficiency through specialization</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Hierarchy:</strong> Clear authority chain for discipline</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Unity of Command:</strong> One supervisor per employee</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Span of Control:</strong> Manageable subordinate numbers</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Delegation:</strong> Shares authority for decision-making</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Coordination:</strong> Harmonizes departmental efforts</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Centralization vs. Decentralization:</strong> Balances decision-making</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Flexibility:</strong> Adapts to change and innovation</li>
+                        </ul>
+                        <h5 class="mt-4 mb-2" style="font-weight: 600;">Significance</h5>
+                        <p class="card-text">
+                            Well-applied principles enhance operational efficiency, ensure accountability, and support strategic goals, vital for institutions like fisheries cooperatives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Management of Enterprise Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm" style="background-color: #ffffff; color: #333333; border-radius: 10px; padding: 20px;">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-briefcase fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="card-title text-center mb-3" style="font-size: 1.75rem; font-weight: 600;">Management of Enterprise</h3>
+                        <p class="card-text">
+                            Enterprise management administers business activities to achieve goals like profit, growth, and market leadership, applicable to both public and private enterprises in sectors like fisheries.
+                        </p>
+                        <h5 class="mt-4 mb-2" style="font-weight: 600;">Key Functions</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Planning:</strong> Setting objectives and strategies</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Organizing:</strong> Arranging tasks and resources</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Staffing:</strong> Hiring and training personnel</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Directing:</strong> Leading and motivating employees</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Controlling:</strong> Monitoring and adjusting outcomes</li>
+                        </ul>
+                        <h5 class="mt-4 mb-2" style="font-weight: 600;">Types of Enterprises</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Public Enterprises: Government-owned, non-profit</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Private Enterprises: Privately owned, profit-driven</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Joint Ventures: Mixed public-private ownership</li>
+                        </ul>
+                        <h5 class="mt-4 mb-2" style="font-weight: 600;">Principles</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Goal Orientation</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Accountability</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Customer Focus</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Innovation</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Sustainability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Governance & Management Section End -->
+
+
+<!-- Fisheries Government Structure Section Start -->
+<section class="container-fluid py-5" style="background-color: #f8f9fa;">
+    <div class="container py-5">
+        <!-- Section Header -->
+        <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.2s">
+            <h4 class="text-primary mb-3">Fisheries Governance</h4>
+            <h2 class="display-5 mb-4" style="color: #1a2b4c; font-weight: bold;">Central & State Roles in Fisheries</h2>
+            <p class="lead" style="color: #6c757d; max-width: 700px; margin: 0 auto;">
+                Understand the collaborative framework of Central and State Governments in shaping India's fisheries sector through policy, regulation, and sustainable development initiatives.
+            </p>
+        </div>
+        <!-- Accordion Content -->
+        <div class="accordion" id="fisheriesAccordion">
+            <!-- Central Government Panel -->
+            <div class="accordion-item mb-3 shadow-sm wow fadeInUp" data-wow-delay="0.3s" style="border: none; border-radius: 8px;">
+                <h2 class="accordion-header" id="centralHeading">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#centralCollapse" aria-expanded="true" aria-controls="centralCollapse" style="background-color: #ffffff; color: #1a2b4c; font-weight: 600;">
+                        <i class="fas fa-university fa-lg text-primary me-3"></i> Central Government Roles
+                    </button>
+                </h2>
+                <div id="centralCollapse" class="accordion-collapse collapse show" aria-labelledby="centralHeading" data-bs-parent="#fisheriesAccordion">
+                    <div class="accordion-body" style="background-color: #ffffff; border-radius: 0 0 8px 8px;">
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <h5 class="text-primary mb-2"><i class="fas fa-file-alt me-2"></i>Policy & Regulation</h5>
+                                <p class="ms-4" style="color: #495057;">Sets national policies, such as the National Policy on Marine Fisheries, to guide sustainable fisheries development.</p>
+                            </li>
+                            <li class="mb-3">
+                                <h5 class="text-primary mb-2"><i class="fas fa-hand-holding-usd me-2"></i>Funding & Schemes</h5>
+                                <p class="ms-4" style="color: #495057;">Provides training and financial support through the National Fisheries Development Board (NFDB).</p>
+                            </li>
+                            <li class="mb-3">
+                                <h5 class="text-primary mb-2"><i class="fas fa-handshake me-2"></i>Coordination</h5>
+                                <p class="ms-4" style="color: #495057;">NFDB facilitates coordination between the Centre, states, and stakeholders for unified efforts.</p>
+                            </li>
+                            <li>
+                                <h5 class="text-primary mb-2"><i class="fas fa-flask me-2"></i>Research & Development</h5>
+                                <p class="ms-4" style="color: #495057;">Supports R&D through institutions like the Central Marine Fisheries Research Institute (CMFRI) and Offshore Fishing Technology (OFT).</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- State Government Panel -->
+            <div class="accordion-item mb-3 shadow-sm wow fadeInUp" data-wow-delay="0.4s" style="border: none; border-radius: 8px;">
+                <h2 class="accordion-header" id="stateHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stateCollapse" aria-expanded="false" aria-controls="stateCollapse" style="background-color: #ffffff; color: #1a2b4c; font-weight: 600;">
+                        <i class="fas fa-map-marked-alt fa-lg text-primary me-3"></i> State Government Roles
+                    </button>
+                </h2>
+                <div id="stateCollapse" class="accordion-collapse collapse" aria-labelledby="stateHeading" data-bs-parent="#fisheriesAccordion">
+                    <div class="accordion-body" style="background-color: #ffffff; border-radius: 0 0 8px 8px;">
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <h5 class="text-primary mb-2"><i class="fas fa-water me-2"></i>Territorial Management</h5>
+                                <p class="ms-4" style="color: #495057;">Regulates fishing in territorial waters, including zones, gear, and seasons, to ensure sustainability. <em>Note: "tidra" corrected to "territorial waters."</em></p>
+                            </li>
+                            <li class="mb-3">
+                                <h5 class="text-primary mb-2"><i class="fas fa-cogs me-2"></i>Implementation</h5>
+                                <p class="ms-4" style="color: #495057;">Executes central schemes at the ground level to support local fishers and communities.</p>
+                            </li>
+                            <li class="mb-3">
+                                <h5 class="text-primary mb-2"><i class="fas fa-graduation-cap me-2"></i>Capacity Building</h5>
+                                <p class="ms-4" style="color: #495057;">Organizes local training and capacity-building programs to enhance skills and productivity.</p>
+                            </li>
+                            <li>
+                                <h5 class="text-primary mb-2"><i class="fas fa-project-diagram me-2"></i>Specific Programs</h5>
+                                <p class="ms-4" style="color: #495057;">Designs and implements state-specific fisheries initiatives tailored to regional needs.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Collaboration Panel -->
+            <div class="accordion-item mb-3 shadow-sm wow fadeInUp" data-wow-delay="0.5s" style="border: none; border-radius: 8px;">
+                <h2 class="accordion-header" id="collaborationHeading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collaborationCollapse" aria-expanded="false" aria-controls="collaborationCollapse" style="background-color: #ffffff; color: #1a2b4c; font-weight: 600;">
+                        <i class="fas fa-users fa-lg text-primary me-3"></i> Collaboration
+                    </button>
+                </h2>
+                <div id="collaborationCollapse" class="accordion-collapse collapse" aria-labelledby="collaborationHeading" data-bs-parent="#fisheriesAccordion">
+                    <div class="accordion-body" style="background-color: #ffffff; border-radius: 0 0 8px 8px;">
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <h5 class="text-primary mb-2"><i class="fas fa-comments me-2"></i>Policy Alignment</h5>
+                                <p class="ms-4" style="color: #495057;">Regular consultations with states ensure alignment of national and regional fisheries policies.</p>
+                            </li>
+                            <li>
+                                <h5 class="text-primary mb-2"><i class="fas fa-handshake me-2"></i>Joint Strategies</h5>
+                                <p class="ms-4" style="color: #495057;">Participation in collaborative strategies fosters unified efforts for sustainable fisheries development.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Fisheries Government Structure Section End -->
+
+
+
+<!-- Fisheries Policies & Department Roles Section Start -->
+<section class="container-fluid py-5" style="background-color: #e9f0f7;">
+    <div class="container py-5">
+        <!-- Section Header -->
+        <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.2s">
+            <h4 class="text-primary mb-3">Fisheries Sector</h4>
+            <h2 class="display-5 mb-4" style="color: #1a2b4c; font-weight: bold;">Policies & Departmental Impact</h2>
+            <p class="lead" style="color: #6c757d; max-width: 700px; margin: 0 auto;">
+                Explore the evolution of fisheries policies and the pivotal role of the Department of Fisheries in driving sustainable development and livelihood security in India’s fisheries sector.
+            </p>
+        </div>
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs mb-4 justify-content-center wow fadeInUp" data-wow-delay="0.3s" id="fisheriesTabs" role="tablist">
+            <li class="nav-item">
+                <button class="nav-link active" id="policies-tab" data-bs-toggle="tab" data-bs-target="#policies" type="button" role="tab" aria-controls="policies" aria-selected="true" style="font-weight: 600; color: #1a2b4c;">
+                    <i class="fas fa-file-alt text-primary me-2"></i> Fisheries Policies
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="department-tab" data-bs-toggle="tab" data-bs-target="#department" type="button" role="tab" aria-controls="department" aria-selected="false" style="font-weight: 600; color: #1a2b4c;">
+                    <i class="fas fa-building text-primary me-2"></i> Department of Fisheries
+                </button>
+            </li>
+        </ul>
+        <!-- Tab Content -->
+        <div class="tab-content wow fadeInUp" data-wow-delay="0.4s">
+            <!-- Fisheries Policies Tab -->
+            <div class="tab-pane fade show active" id="policies" role="tabpanel" aria-labelledby="policies-tab">
+                <div class="card shadow-sm p-4" style="background-color: #ffffff; border-radius: 10px; color: #333333;">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-fish fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="mb-4 text-center" style="font-size: 1.75rem; font-weight: 600;">Present Relevance of Fisheries Policies</h3>
+                        <p class="mb-3">
+                            Fisheries policies aim to enhance sustainable development, production, and livelihood security in the fisheries sector. The National Policy on Marine Fisheries (NPMF) 2017 and National Fisheries Policy 2020 build upon earlier policies to address challenges and promote sustainable practices.
+                        </p>
+                        <h5 class="mt-4 mb-2" style="font-weight: 600;">Past Fisheries Policies</h5>
+                        <ul class="list-unstyled ms-4">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Comprehensive Marine Fishing Policy (2004):</strong> Laid the foundation for marine fisheries management.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <strong>National Policy on Marine Fisheries (NPMF) (2017):</strong> Focused on sustainability and resource conservation.</li>
+                        </ul>
+                        <h5 class="mt-4 mb-2" style="font-weight: 600;">Present Fisheries Policies</h5>
+                        <ul class="list-unstyled ms-4">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <strong>National Fisheries Policy 2020:</strong> Integrates marine, inland, and aquaculture for holistic growth.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Pradhan Mantri Matsya Sampada Yojana (PMMSY):</strong> Boosts infrastructure, productivity, and fisher welfare.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Department of Fisheries Tab -->
+            <div class="tab-pane fade" id="department" role="tabpanel" aria-labelledby="department-tab">
+                <div class="card shadow-sm p-4" style="background-color: #ffffff; border-radius: 10px; color: #333333;">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-users-cog fa-3x text-primary"></i>
+                        </div>
+                        <h3 class="mb-4 text-center" style="font-size: 1.75rem; font-weight: 600;">Department of Fisheries: Functions & Powers</h3>
+                        <p class="mb-3">
+                            The Department of Fisheries, under the Ministry of Fisheries, Animal Husbandry & Dairying, plays a crucial role in developing and regulating India’s fisheries sector. Its functions and powers, particularly in promoting cooperation and cooperatives, are designed to foster sustainable growth and improve fishers’ livelihoods.
+                        </p>
+                        <h5 class="mt-4 mb-2" style="font-weight: 600;">Key Functions and Powers</h5>
+                        <ul class="list-unstyled ms-4">
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Policy Formulation:</strong> Develops national strategies to enhance fisheries productivity and sustainability.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Cooperative Promotion:</strong> Supports fisheries cooperatives to empower fishers and improve market access.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Infrastructure Development:</strong> Facilitates the creation of fishing harbors, cold chains, and processing units.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Training & Capacity Building:</strong> Organizes programs to enhance skills and knowledge of fishers.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Regulation & Monitoring:</strong> Enforces sustainable fishing practices and compliance with environmental norms.</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Financial Support:</strong> Administers schemes like PMMSY to provide subsidies and financial aid.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Fisheries Policies & Department Roles Section End -->
+
+
+
+<!-- Fisheries Department Grid Section Start -->
+<section class="container-fluid py-5" >
+    <div class="container py-5">
+        <!-- Section Header -->
+        <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.2s">
+            <h4 class="text-primary mb-3">Department of Fisheries</h4>
+            <h2 class="display-5 mb-4" style="color: #003366; font-weight: bold;">Empowering India’s Fisheries Ecosystem</h2>
+            <p class="lead" style="color: #526a8c; max-width: 700px; margin: 0 auto;">
+                The Department of Fisheries, under the Ministry of Fisheries, Animal Husbandry & Dairying, drives sustainable development, cooperative growth, and institutional innovation to uplift fishers’ livelihoods.
+            </p>
+        </div>
+        <!-- Feature Boxes -->
+        <div class="row g-4">
+            <!-- Functions Box -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="feature-box bg-white p-4 rounded shadow-sm h-100" style="border-top: 4px solid #007bff; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.05)';">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-clipboard-list fa-3x text-primary me-3"></i>
+                        <h3 style="color: #003366; font-weight: 600;">Core Functions</h3>
+                    </div>
+                    <p class="mb-3" style="color: #495057;">
+                        The Department fosters holistic growth across inland, marine, and coastal fisheries through:
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Policy Formulation:</strong> Crafts policies for fishing, infrastructure, and exports.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Resource Management:</strong> Surveys fish stocks and ensures sustainability via MCS.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Infrastructure:</strong> Builds ice plants, cold storages, and fish markets.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Fishermen Welfare:</strong> Offers livelihood and social security schemes.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Technology:</strong> Promotes skill development and new processes.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Quality Control:</strong> Regulates fish stock importation and certification.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Data Collection:</strong> Gathers fisheries statistics for policy.</li>
+                        <li><i class="fas fa-chevron-right text-primary me-2"></i><strong>Global Cooperation:</strong> Signs MoUs with international bodies.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Powers Box -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="feature-box bg-white p-4 rounded shadow-sm h-100" style="border-top: 4px solid #007bff; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.05)';">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-gavel fa-3x text-primary me-3"></i>
+                        <h3 style="color: #003366; font-weight: 600;">Key Powers</h3>
+                    </div>
+                    <p class="mb-3" style="color: #495057;">
+                        The Department’s mandate enables it to regulate and advance the fisheries sector by:
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Financial Assistance:</strong> Disburses funds to states, UTs, and cooperatives.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Regulations:</strong> Enforces laws for fishing and disease prevention.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Institutional Oversight:</strong> Manages FSI, CIFNET, and NFDB.</li>
+                        <li><i class="fas fa-chevron-right text-primary me-2"></i><strong>Staff Management:</strong> Appoints and controls staff for operations.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Cooperatives Box -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="feature-box bg-white p-4 rounded shadow-sm h-100" style="border-top: 4px solid #007bff; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.05)';">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-handshake fa-3x text-primary me-3"></i>
+                        <h3 style="color: #003366; font-weight: 600;">Cooperation & Cooperatives</h3>
+                    </div>
+                    <p class="mb-3" style="color: #495057;">
+                        The Department strengthens fisheries cooperatives to promote collective growth:
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Formation:</strong> Promotes FFPOs and cooperative societies.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Funding:</strong> Supports infrastructure, vessels, and marketing.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Training:</strong> Offers skill development and technical guidance.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Market Linkages:</strong> Facilitates partnerships for better pricing.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Sustainability:</strong> Ensures fair resource use and quotas.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Modernization:</strong> Upgrades operations for marginal fishers.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Policy Support:</strong> Integrates cooperative benefits.</li>
+                        <li><i class="fas fa-chevron-right text-primary me-2"></i><strong>Advisory:</strong> Guides states on cooperative policies.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Institutions Box -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="feature-box bg-white p-4 rounded shadow-sm h-100" style="border-top: 4px solid #007bff; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.05)';">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-university fa-3x text-primary me-3"></i>
+                        <h3 style="color: #003366; font-weight: 600;">Key Institutions</h3>
+                    </div>
+                    <p class="mb-3" style="color: #495057;">
+                        Premier institutions lead research, education, and innovation:
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>ICAR-CIFE:</strong> Fisheries education and training.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>ICAR-CIFT:</strong> Fish processing and post-harvest tech.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>ICAR-CMFRI:</strong> Marine fisheries research.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>ICAR-CIFRI:</strong> Inland fisheries and aquaculture.</li>
+                        <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>ICAR-CIBA:</strong> Brackishwater aquaculture.</li>
+                        <li><i class="fas fa-chevron-right text-primary me-2"></i><strong>ICAR-CIFA:</strong> Freshwater aquaculture practices.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Fisheries Department Grid Section End -->
+<!-- Fisheries Institutions Section Start -->
+<section class="container-fluid py-5" style="background-color: #edf6ff;">
+    <div class="container py-5">
+        <!-- Section Header -->
+        <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.2s">
+            <h4 class="text-primary mb-3">Fisheries Institutions in India</h4>
+            <h2 class="display-5 mb-4" style="color: #002244; font-weight: bold;">Pioneering Fisheries Education & Development</h2>
+            <p class="lead" style="color: #5b6b8a; max-width: 700px; margin: 0 auto;">
+                Discover key institutions driving education, research, and sustainable development in India’s fisheries sector, with a special focus on Haryana’s contributions.
+            </p>
+        </div>
+        <!-- Carousel Content -->
+        <div class="carousel slide wow fadeInUp" data-wow-delay="0.3s" id="fisheriesCarousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- State Agricultural Universities -->
+                <div class="carousel-item active">
+                    <div class="p-4 bg-white rounded shadow-sm" style="border-left: 4px solid #007bff; margin: 0 15px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-university fa-3x text-primary me-3"></i>
+                            <h3 style="color: #002244; font-weight: 600;">State Agricultural Universities</h3>
+                        </div>
+                        <p style="color: #495057;">
+                            Many state agricultural universities host dedicated fisheries departments or colleges, advancing education and research. For example, <strong>Kerala University of Fisheries and Ocean Studies (KUFOS)</strong> is a specialized fisheries university offering cutting-edge programs.
+                        </p>
+                    </div>
+                </div>
+                <!-- National Fisheries Development Board -->
+                <div class="carousel-item">
+                    <div class="p-4 bg-white rounded shadow-sm" style="border-left: 4px solid #007bff; margin: 0 15px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-fish fa-3x text-primary me-3"></i>
+                            <h3 style="color: #002244; font-weight: 600;">National Fisheries Development Board (NFDB)</h3>
+                        </div>
+                        <p style="color: #495057;">
+                            Under the Department of Fisheries, Government of India, NFDB promotes sustainable fisheries development through policy support, funding, and capacity-building initiatives.
+                        </p>
+                    </div>
+                </div>
+                <!-- Fishery Survey of India -->
+                <div class="carousel-item">
+                    <div class="p-4 bg-white rounded shadow-sm" style="border-left: 4px solid #007bff; margin: 0 15px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-chart-line fa-3x text-primary me-3"></i>
+                            <h3 style="color: #002244; font-weight: 600;">Fishery Survey of India (FSI)</h3>
+                        </div>
+                        <p style="color: #495057;">
+                            FSI surveys and assesses fish resources, providing critical data for fisheries management and conservation efforts across India’s waters.
+                        </p>
+                    </div>
+                </div>
+                <!-- National Bureau of Fish Genetic Resources -->
+                <div class="carousel-item">
+                    <div class="p-4 bg-white rounded shadow-sm" style="border-left: 4px solid #007bff; margin: 0 15px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-dna fa-3x text-primary me-3"></i>
+                            <h3 style="color: #002244; font-weight: 600;">National Bureau of Fish Genetic Resources (NBFGR)</h3>
+                        </div>
+                        <p style="color: #495057;">
+                            NBFGR focuses on conserving fish genetic resources, advancing breeding techniques, and supporting biodiversity in the fisheries sector.
+                        </p>
+                    </div>
+                </div>
+                <!-- Haryana Fisheries Institutions -->
+                <div class="carousel-item">
+                    <div class="p-4 bg-white rounded shadow-sm" style="border-left: 4px solid #007bff; margin: 0 15px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-water fa-3x text-primary me-3"></i>
+                            <h3 style="color: #002244; font-weight: 600;">Haryana Fisheries Institutions</h3>
+                        </div>
+                        <p style="color: #495057;">
+                            Haryana hosts key fisheries institutions, including:
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>ICAR-CIFE Rohtak Center:</strong> Advances fisheries education and research.</li>
+                            <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>Aquaculture Research & Training Institute (ARTI), Hisar:</strong> Established under a World Bank project, offers training programs for farmers.</li>
+                            <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i><strong>State-Level Training & Research Institute, Hisar:</strong> Supports fisheries development.</li>
+                            <li><i class="fas fa-chevron-right text-primary me-2"></i><strong>Fisheries Department, Haryana:</strong> Manages 13 government fish seed farms, 11 private hatcheries, and 50 private rearing units, providing technical and financial support to promote fish farming.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- COFS CCSHAU, Hisar -->
+                <div class="carousel-item">
+                    <div class="p-4 bg-white rounded shadow-sm" style="border-left: 4px solid #ff6f00; margin: 0 15px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-graduation-cap fa-3x text-warning me-3"></i>
+                            <h3 style="color: #002244; font-weight: 600;">COFS CCSHAU, Hisar</h3>
+                        </div>
+                        <p style="color: #495057;">
+                            <strong>College of Fisheries Science, Chaudhary Charan Singh Haryana Agricultural University (COFS CCSHAU), Hisar</strong>, is a leading institution offering <strong>B.F.Sc., M.F.Sc., and PhD programs</strong>, fostering advanced education and research to empower the fisheries sector in Haryana and beyond.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#fisheriesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #007bff; border-radius: 50%;"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#fisheriesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #007bff; border-radius: 50%;"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+<!-- Fisheries Institutions Section End -->
+
+<!-- Carousel CSS -->
+<style>
+    .carousel-item {
+        transition: transform 0.5s ease-in-out;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        width: 50px;
+        height: 50px;
+        background-size: 60%;
+    }
+    .carousel-control-prev, .carousel-control-next {
+        width: 4%;
+    }
+
+    /* Mobile view adjustment */
+    @media (max-width: 768px) {
+        .carousel-control-prev, .carousel-control-next {
+            width: 20%;
+        }
+    }
+</style>
+
+
+
+<!-- Regulatory Roles Start -->
+<div class="container-fluid regulatory-roles py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Regulatory Framework</h4>
+            <h1 class="display-5 mb-4">Role of Central & State Governments in Fisheries and Aquaculture</h1>
+            <p class="mb-0">The Central and State Governments of India play pivotal roles in regulating and promoting sustainable aquaculture and fisheries, ensuring environmental protection, economic growth, and the welfare of fishers through policies, subsidies, and training programs.</p>
+        </div>
+        <div class="row g-5">
+            <!-- Central Government Role -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="regulatory-item bg-light rounded p-4 h-100">
+                    <h2 class="text-primary mb-4">Central Government Responsibilities</h2>
+                    <p>The Ministry of Fisheries, Animal Husbandry and Dairying oversees fisheries in the Exclusive Economic Zone (EEZ), promotes sustainable practices, and supports fishers through various schemes and infrastructure development.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Resource Management</h5>
+                                <p class="mb-0">Conducts surveys and assessments of fisheries resources in the EEZ to ensure sustainable exploitation.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Financial Support</h5>
+                                <p class="mb-0">Provides subsidies for motorization of traditional craft, fishing gear, and reimbursement of excise duty on High Speed Diesel (HSD) oil.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Infrastructure Development</h5>
+                                <p class="mb-0">Develops fishing harbor facilities at major and minor ports and supports renovation or construction of fish farms.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Aquaculture Support</h5>
+                                <p class="mb-0">Facilitates establishment of shrimp seed hatcheries with a capacity of 2-5 million.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Community Welfare</h5>
+                                <p class="mb-0">Implements the Development of Fishing Villages (DFV) program, providing housing, drinking water, and community halls.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Relief Programs</h5>
+                                <p class="mb-0">Offers financial relief to fishers during lean periods to ensure livelihood security.</p>
+                            </div>
+                        </li>
+                    </ul>
+                   
+                </div>
+            </div>
+            <!-- State Government Role -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="regulatory-item bg-light rounded p-4 h-100">
+                    <h2 class="text-primary mb-4">State Government Responsibilities</h2>
+                    <p>State Governments regulate aquaculture operations, enforce environmental standards, and provide training and financial assistance to promote sustainable fisheries practices at the local level.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Training Programs</h5>
+                                <p class="mb-0">Offers in-service training for departmental officers and hands-on training for fish farmers through refresher courses and study tours.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Merged Schemes</h5>
+                                <p class="mb-0">Integrates Education, Training & Extension, and Utilization of Saline Ground Water schemes to enhance efficiency.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Licensing & Regulation</h5>
+                                <p class="mb-0">Oversees licensing and permitting for aquaculture operations to ensure compliance with regulations.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Environmental Oversight</h5>
+                                <p class="mb-0">Monitors water quality, sets environmental standards, and establishes harvest limits to promote sustainability.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Research & Extension</h5>
+                                <p class="mb-0">Conducts research and provides extension services to support innovation in the fisheries sector.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-3">
+                            <i class="fas fa-check-circle text-primary me-3 mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Financial Assistance</h5>
+                                <p class="mb-0">Offers subsidies and financial support to promote sustainable aquaculture and fishing practices.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Regulatory Roles End -->
+
+
+<!-- Historical Review Start -->
+<div class="container-fluid historical-review py-5 bg-light">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Historical Review</h4>
+            <h1 class="display-5 mb-4">Evolution of Fisheries Development in India</h1>
+            <p class="mb-0">The development of India’s fisheries sector has been shaped by key institutions established over the past century, laying the groundwork for scientific research, conservation, and sustainable management of aquatic resources.</p>
+        </div>
+        <div class="row g-4">
+            <!-- ZSI -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="historical-item bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-book fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">Zoological Survey of India</h4>
+                    </div>
+                    <p class="text-muted mb-2"><i class="fas fa-calendar-alt text-primary me-2"></i>Established: July 1, 1916</p>
+                    <p class="mb-3">The Zoological Survey of India (ZSI) was founded to focus on animal taxonomy and conservation, providing the scientific foundation for understanding India’s aquatic resources and supporting fisheries development.</p>
+                   
+                </div>
+            </div>
+            <!-- CMFRI -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="historical-item bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-ship fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">Central Marine Fisheries Research Station</h4>
+                    </div>
+                    <p class="text-muted mb-2"><i class="fas fa-calendar-alt text-primary me-2"></i>Established: February 3, 1947</p>
+                    <p class="mb-3">Initiated on the recommendation of Dr. Baini Prashad, Director of ZSI, the Central Marine Fisheries Research Station (CMFRI) was established in Kochi, Kerala, to advance marine fisheries research and management.</p>
+                    
+                </div>
+            </div>
+            <!-- CIFRI/CIFT -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="historical-item bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-water fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">Central Inland Fisheries Research Station</h4>
+                    </div>
+                    <p class="text-muted mb-2"><i class="fas fa-calendar-alt text-primary me-2"></i>Established: March 17, 1947</p>
+                    <p class="mb-3">Founded in Barrackpore, West Bengal, the Central Inland Fisheries Research Station (CIFRI) was later elevated in 1961 to the Central Institute of Fisheries Technology (CIFT) in Kochi, Kerala, enhancing inland fisheries research.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Historical Review End -->
+
+<!-- International Organizations Start -->
+<div class="container-fluid international-orgs py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Global Impact</h4>
+            <h1 class="display-5 mb-4">International Agencies Promoting Fisheries Worldwide</h1>
+            <p class="mb-0">International organizations play a crucial role in advancing sustainable fisheries and aquaculture globally, fostering research, policy development, and community support to ensure the health of aquatic ecosystems and livelihoods.</p>
+        </div>
+        <div class="accordion" id="fisheriesAccordion">
+            <!-- FAO -->
+            <div class="accordion-item bg-white rounded mb-3 wow fadeInUp" data-wow-delay="0.2s">
+                <h2 class="accordion-header" id="headingFAO">
+                    <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFAO" aria-expanded="false" aria-controls="collapseFAO">
+                        <i class="fas fa-globe fa-2x me-3"></i> Food and Agriculture Organization (FAO)
+                    </button>
+                </h2>
+                <div id="collapseFAO" class="accordion-collapse collapse" aria-labelledby="headingFAO" data-bs-parent="#fisheriesAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Established:</strong> 1945</p>
+                        <p><strong>Membership:</strong> 194 member countries, two associate members, and one member organization (the European Union).</p>
+                        <p>The FAO promotes sustainable fisheries and aquaculture through global policies, technical assistance, and initiatives to enhance food security and aquatic resource management.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- World Fish Center -->
+            <div class="accordion-item bg-white rounded mb-3 wow fadeInUp" data-wow-delay="0.3s">
+                <h2 class="accordion-header" id="headingWorldFish">
+                    <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWorldFish" aria-expanded="false" aria-controls="collapseWorldFish">
+                        <i class="fas fa-fish fa-2x me-3"></i> World Fish Center (ICLARM)
+                    </button>
+                </h2>
+                <div id="collapseWorldFish" class="accordion-collapse collapse" aria-labelledby="headingWorldFish" data-bs-parent="#fisheriesAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Established:</strong> 1977</p>
+                        <p><strong>Renamed:</strong> World Fish Center in 2000</p>
+                        <p><strong>Also Known As:</strong> International Center for Living Aquatic Resources Management (ICLARM)</p>
+                        <p>The World Fish Center focuses on research and innovation to improve fisheries and aquaculture, supporting sustainable livelihoods in developing countries.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ISSF -->
+            <div class="accordion-item bg-white rounded mb-3 wow fadeInUp" data-wow-delay="0.4s">
+                <h2 class="accordion-header" id="headingISSF">
+                    <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseISSF" aria-expanded="false" aria-controls="collapseISSF">
+                        <i class="fas fa-anchor fa-2x me-3"></i> International Seafood Sustainability Foundation (ISSF)
+                    </button>
+                </h2>
+                <div id="collapseISSF" class="accordion-collapse collapse" aria-labelledby="headingISSF" data-bs-parent="#fisheriesAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Established:</strong> 2009</p>
+                        <p><strong>Headquarters:</strong> Virginia, USA</p>
+                        <p>The ISSF works to ensure the long-term sustainability of global tuna fisheries through science-based practices and industry collaboration.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- RFMOs -->
+            <div class="accordion-item bg-white rounded mb-3 wow fadeInUp" data-wow-delay="0.5s">
+                <h2 class="accordion-header" id="headingRFMOs">
+                    <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRFMOs" aria-expanded="false" aria-controls="collapseRFMOs">
+                        <i class="fas fa-map-marked-alt fa-2x me-3"></i> Regional Fisheries Management Organizations (RFMOs)
+                    </button>
+                </h2>
+                <div id="collapseRFMOs" class="accordion-collapse collapse" aria-labelledby="headingRFMOs" data-bs-parent="#fisheriesAccordion">
+                    <div class="accordion-body">
+                        <p>RFMOs are international organizations formed by countries with fishing interests in specific regions to manage and conserve fisheries resources collaboratively.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- UNDP -->
+            <div class="accordion-item bg-white rounded mb-3 wow fadeInUp" data-wow-delay="0.6s">
+                <h2 class="accordion-header" id="headingUNDP">
+                    <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUNDP" aria-expanded="false" aria-controls="collapseUNDP">
+                        <i class="fas fa-handshake fa-2x me-3"></i> United Nations Development Programme (UNDP)
+                    </button>
+                </h2>
+                <div id="collapseUNDP" class="accordion-collapse collapse" aria-labelledby="headingUNDP" data-bs-parent="#fisheriesAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Established:</strong> 1965</p>
+                        <p><strong>Headquarters:</strong> New York City, USA</p>
+                        <p>The UNDP supports sustainable fisheries through development projects, capacity building, and initiatives to improve livelihoods and environmental sustainability.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ICSF -->
+            <div class="accordion-item bg-white rounded mb-3 wow fadeInUp" data-wow-delay="0.7s">
+                <h2 class="accordion-header" id="headingICSF">
+                    <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseICSF" aria-expanded="false" aria-controls="collapseICSF">
+                        <i class="fas fa-users fa-2x me-3"></i> International Collective in Support of Fishworkers (ICSF)
+                    </button>
+                </h2>
+                <div id="collapseICSF" class="accordion-collapse collapse" aria-labelledby="headingICSF" data-bs-parent="#fisheriesAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Founded:</strong> 1986</p>
+                        <p><strong>Headquarters:</strong> Chennai, India</p>
+                        <p>The ICSF advocates for the rights and livelihoods of small-scale fishworkers, promoting sustainable fisheries and social justice globally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- International Organizations End -->
+
+      <!-- Fisheries Legislation Start -->
+<div class="container-fluid fisheries-legislation py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Legislative Framework</h4>
+            <h1 Dan class="display-5 mb-4">Key Acts for Fisheries & Environmental Regulation</h1>
+            <p class="mb-0">India’s fisheries and aquaculture sectors are supported by a comprehensive set of laws that promote sustainability, protect the environment, and foster industry growth, ensuring the well-being of aquatic ecosystems and communities.</p>
+        </div>
+        <div class="row g-4">
+            <!-- Indian Fisheries Act, 1897 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="legislation-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-gavel fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">Indian Fisheries Act, 1897</h4>
+                    </div>
+                    <p class="text-muted mb-2"><strong>Year:</strong> 1897</p>
+                    <p class="mb-0">Protects fisheries by regulating destructive practices such as poisoning and dynamiting waters, ensuring conservation of aquatic resources.</p>
+                </div>
+            </div>
+            <!-- Water (Prevention and Control of Pollution) Act, 1974 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="legislation-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-water fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">Water Pollution Act, 1974</h4>
+                    </div>
+                    <p class="text-muted mb-2"><strong>Year:</strong> 1974</p>
+                    <p class="mb-0">Aims to prevent and control water pollution, maintaining or restoring water quality for sustainable fisheries and aquaculture.</p>
+                </div>
+            </div>
+            <!-- Air (Prevention and Control of Pollution) Act, 1981 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="legislation-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-wind fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">Air Pollution Act, 1981</h4>
+                    </div>
+                    <p class="text-muted mb-2"><strong>Year:</strong> 1981</p>
+                    <p class="mb-0">Seeks to prevent, control, and abate air pollution to preserve air quality, supporting environmental health for fisheries.</p>
+                </div>
+            </div>
+            <!-- Environment Protection Act, 1986 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="legislation-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-leaf fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">Environment Protection Act, 1986</h4>
+                    </div>
+                    <p class="text-muted mb-2"><strong>Year:</strong> 1986</p>
+                    <p class="mb-0">Provides a framework for environmental protection and hazard prevention, ensuring sustainable practices in fisheries.</p>
+                </div>
+            </div>
+            <!-- Wildlife Protection Act, 1972 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="legislation-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-paw fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">Wildlife Protection Act, 1972</h4>
+                    </div>
+                    <p class="text-muted mb-2"><strong>Year:</strong> 1972</p>
+                    <p class="mb-0">Protects wildlife and their habitats, controlling hunting and trade to preserve biodiversity in aquatic ecosystems.</p>
+                </div>
+            </div>
+            <!-- MPEDA Act, 1972 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="legislation-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-ship fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">MPEDA Act, 1972</h4>
+                    </div>
+                    <p class="text-muted mb-2"><strong>Year:</strong> 1972</p>
+                    <p class="mb-0">Establishes MPEDA to promote marine product exports and develop the marine industry for economic growth.</p>
+                </div>
+            </div>
+            <!-- Coastal Aquaculture Authority Act, 2005 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.8s">
+                <div class="legislation-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-fish fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">Coastal Aquaculture Act, 2005</h4>
+                    </div>
+                    <p class="text-muted mb-2"><strong>Year:</strong> 2005</p>
+                    <p class="mb-0">Establishes the Coastal Aquaculture Authority to regulate coastal aquaculture for sustainable development.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fisheries Legislation End -->
+
+<!-- Fisheries Policies Start -->
+<div class="container-fluid fisheries-policies py-5 bg-light">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Policy Framework</h4>
+            <h1 class="display-5 mb-4">Key Policies Driving Fisheries Development in India</h1>
+            <p class="mb-0">India’s fisheries sector is propelled by forward-thinking policies that promote sustainability, infrastructure development, and economic support, ensuring the growth of fisheries and aquaculture while safeguarding livelihoods and ecosystems.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-12 wow fadeInUp" data-wow-delay="0.2s">
+                <ul class="nav nav-tabs d-flex flex-wrap justify-content-center" id="policiesTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active mx-2 mb-2" id="nfp-tab" data-bs-toggle="tab" data-bs-target="#nfp-content" type="button" role="tab" aria-controls="nfp-content" aria-selected="true">National Fisheries Policy (2020)</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link mx-2 mb-2" id="npmf-tab" data-bs-toggle="tab" data-bs-target="#npmf-content" type="button" role="tab" aria-controls="npmf-content" aria-selected="false">Marine Fisheries Policy (2017)</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link mx-2 mb-2" id="pmmsy-tab" data-bs-toggle="tab" data-bs-target="#pmmsy-content" type="button" role="tab" aria-controls="pmmsy-content" aria-selected="false">PMMSY (2020)</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link mx-2 mb-2" id="blue-revolution-tab" data-bs-toggle="tab" data-bs-target="#blue-revolution-content" type="button" role="tab" aria-controls="blue-revolution-content" aria-selected="false">Blue Revolution (2014)</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link mx-2 mb-2" id="fidf-tab" data-bs-toggle="tab" data-bs-target="#fidf-content" type="button" role="tab" aria-controls="fidf-content" aria-selected="false">FIDF (2018)</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link mx-2 mb-2" id="kcc-tab" data-bs-toggle="tab" data-bs-target="#kcc-content" type="button" role="tab" aria-controls="kcc-content" aria-selected="false">KCC for Fishers (2023)</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link mx-2 mb-2" id="lnss-tab" data-bs-toggle="tab" data-bs-target="#lnss-content" type="button" role="tab" aria-controls="lnss-content" aria-selected="false">LNSS (2020)</button>
+                    </li>
+                </ul>
+                <div class="tab-content mt-4" id="policiesTabContent">
+                    <div class="tab-pane fade show active" id="nfp-content" role="tabpanel" aria-labelledby="nfp-tab">
+                        <div class="card bg-white rounded shadow-sm p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-fish fa-3x text-primary me-3"></i>
+                                <h4 class="mb-0">National Fisheries Policy (2020)</h4>
+                            </div>
+                            <p class="text-muted mb-2"><strong>Implementation:</strong> 2020</p>
+                            <p class="mb-0">Promotes sustainable and responsible fishing while supporting aquaculture, infrastructure development, and marketing to enhance the fisheries sector.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="npmf-content" role="tabpanel" aria-labelledby="npmf-tab">
+                        <div class="card bg-white rounded shadow-sm p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-water fa-3x text-primary me-3"></i>
+                                <h4 class="mb-0">National Policy on Marine Fisheries (2017)</h4>
+                            </div>
+                            <p class="text-muted mb-2"><strong>Implementation:</strong> 2017</p>
+                            <p class="mb-0">Ensures the health and ecological integrity of marine living resources in India’s Exclusive Economic Zone (EEZ).</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pmmsy-content" role="tabpanel" aria-labelledby="pmmsy-tab">
+                        <div class="card bg-white rounded shadow-sm p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-anchor fa-3x text-primary me-3"></i>
+                                <h4 class="mb-0">Pradhan Mantri Matsya Sampada Yojana (2020)</h4>
+                            </div>
+                            <p class="text-muted mb-2"><strong>Implementation:</strong> 2020</p>
+                            <p class="mb-0">A flagship scheme for the focused and sustainable development of the fisheries sector, enhancing production and livelihoods.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="blue-revolution-content" role="tabpanel" aria-labelledby="blue-revolution-tab">
+                        <div class="card bg-white rounded shadow-sm p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-tint fa-3x text-primary me-3"></i>
+                                <h4 class="mb-0">Blue Revolution (2014)</h4>
+                            </div>
+                            <p class="text-muted mb-2"><strong>Implementation:</strong> 2014</p>
+                            <p class="mb-0">Focuses on the development and management of fisheries, covering both marine and inland sectors, to boost productivity and sustainability.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="fidf-content" role="tabpanel" aria-labelledby="fidf-tab">
+                        <div class="card bg-white rounded shadow-sm p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-building fa-3x text-primary me-3"></i>
+                                <h4 class="mb-0">Fisheries and Aquaculture Infrastructure Development Fund (2018)</h4>
+                            </div>
+                            <p class="text-muted mb-2"><strong>Implementation:</strong> 2018</p>
+                            <p class="mb-0">Creates modern fisheries infrastructure to support the growth and efficiency of the fisheries sector.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="kcc-content" role="tabpanel" aria-labelledby="kcc-tab">
+                        <div class="card bg-white rounded shadow-sm p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-credit-card fa-3x text-primary me-3"></i>
+                                <h4 class="mb-0">Kisan Credit Card for Fishers (2023)</h4>
+                            </div>
+                            <p class="text-muted mb-2"><strong>Implementation:</strong> 2023</p>
+                            <p class="mb-0">Extended to fishers and fish farmers under PMMSY, providing financial access for operational needs.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="lnss-content" role="tabpanel" aria-labelledby="lnss-tab">
+                        <div class="card bg-white rounded shadow-sm p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-hand-holding-heart fa-3x text-primary me-3"></i>
+                                <h4 class="mb-0">Livelihood and Nutritional Support Scheme (2020)</h4>
+                            </div>
+                            <p class="text-muted mb-2"><strong>Implementation:</strong> 2020</p>
+                            <p class="mb-0">Provides financial assistance to fishers during the lean fishing season to ensure livelihood security.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fisheries Policies End -->
+
+<!-- Land Reforms for Aquaculture Start -->
+<div class="container-fluid land-reforms py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Land Reforms</h4>
+            <h1 class="display-5 mb-4">Land Reforms Legislation for Aquaculture in India</h1>
+            <p class="mb-0">Land reform legislation in India shapes the aquaculture sector by regulating land use, ensuring equitable access, and promoting sustainable practices, fostering growth while addressing environmental and social challenges.</p>
+        </div>
+        <!-- Introduction -->
+        <div class="row g-4 mb-5">
+            <div class="col-12 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="card bg-white rounded shadow-sm p-4">
+                    <h3 class="text-primary mb-3">Introduction to Land Reforms Legislation</h3>
+                    <p class="mb-0">Land reform legislation in India was introduced to address inequalities in land ownership and promote social justice. Key objectives included abolishing intermediaries like zamindars, implementing land ceilings, regulating tenancy, and redistributing surplus land to the landless. These reforms aimed to empower small and marginal farmers and boost agricultural productivity. Over time, their scope has expanded to include aquaculture, which relies on land and water resources, ensuring sustainable development and equitable resource use in this growing sector.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Land Reforms -->
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="reform-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-ruler-combined fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">Land Ceiling Laws</h4>
+                    </div>
+                    <p class="mb-0">State-specific laws cap land ownership. Some states classify aquaculture as agriculture, allowing it within ceiling limits, while others impose restrictions, affecting aquaculture expansion.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="reform-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-exchange-alt fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">Land Conversion Norms</h4>
+                    </div>
+                    <p class="mb-0">Converting agricultural land for aquaculture requires official approval. States like Andhra Pradesh and Tamil Nadu have streamlined procedures to facilitate such conversions.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="reform-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-file-contract fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">Tenancy Laws</h4>
+                    </div>
+                    <p class="mb-0">Legal recognition of tenancy impacts leased land use for aquaculture. Informal tenancy in some states poses risks to aquaculture investments.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="reform-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-users fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">Common Property Resources</h4>
+                    </div>
+                    <p class="mb-0">Community water bodies, managed by Panchayats, can be leased for aquaculture, but challenges remain in ensuring equitable access and effective management.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="reform-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-water fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">Coastal Regulation Zone Act</h4>
+                    </div>
+                    <p class="mb-0">Regulates coastal aquaculture, particularly shrimp farming, with environmental safeguards enforced by the Aquaculture Authority.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Recent Developments -->
+        <div class="row g-4 mt-5">
+            <div class="col-12 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="card bg-white rounded shadow-sm p-4">
+                    <h3 class="text-primary mb-3">Recent Developments</h3>
+                    <p class="mb-0">States like Andhra Pradesh have amended land laws to recognize aquaculture as an agricultural activity, offering benefits such as subsidized electricity and simplified land conversion processes. These changes have significantly boosted aquaculture growth, enhanced livelihoods, and promoted sustainable practices in the sector.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Land Reforms for Aquaculture End -->
+
+
+<!-- Environmental Protection Cases Start -->
+<style>
+@media (max-width: 576px) {
+    .env-cases-table tbody tr {
+        display: block;
+        margin-bottom: 1.5rem;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        padding: 1rem;
+        background: #fff;
+    }
+    .env-cases-table tbody td {
+        display: block;
+        text-align: left !important;
+        padding: 0.25rem 0;
+        border: none;
+    }
+    .env-cases-table tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 0.25rem;
+        color: #007bff;
+    }
+    .env-cases-table thead {
+        display: none;
+    }
+}
+</style>
+<div class="container-fluid env-cases py-5 bg-light">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Environmental Protection</h4>
+            <h1 class="display-5 mb-4">Key Environmental Protection Cases in India</h1>
+            <p class="mb-0">Landmark judicial cases in India have shaped environmental regulations for aquaculture and coastal management, ensuring sustainable practices and protecting ecosystems from unregulated activities.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-10 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="card bg-white rounded shadow-sm p-4">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover env-cases-table">
+                            <thead class="bg-primary text-white">
+                                <tr>
+                                    <th scope="col" class="py-3">Case</th>
+                                    <th scope="col" class="py-3">Issue</th>
+                                    <th scope="col" class="py-3">Judgment</th>
+                                    <th scope="col" class="py-3">Impact</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Case">S. Jagannath v. UOI (1997)</td>
+                                    <td data-label="Issue">Unregulated shrimp farming damaging coasts</td>
+                                    <td data-label="Judgment">Ordered closure of harmful farms; mandated EIAs</td>
+                                    <td data-label="Impact">Led to Coastal Aquaculture Authority Act (2005)</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Case">T.N. Godavarman v. UOI (2002)</td>
+                                    <td data-label="Issue">Illegal aquaculture in forest areas</td>
+                                    <td data-label="Judgment">Enforced strict environmental laws and monitoring</td>
+                                    <td data-label="Impact">Strengthened forest and biodiversity protection</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Case">Goa Real Estate v. UOI (2010, NGT)</td>
+                                    <td data-label="Issue">CRZ violations in coastal construction</td>
+                                    <td data-label="Judgment">Halted project; required proper EIA and compensation</td>
+                                    <td data-label="Impact">Reinforced CRZ norms and sustainable development</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Environmental Protection Cases End -->
+
+
+<!-- Coastal Regulation Zone Start -->
+<div class="container-fluid crz-section py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Coastal Regulation</h4>
+            <h1 class="display-5 mb-4">Coastal Regulation Zone (CRZ) in India</h1>
+            <p class="mb-0">The Coastal Regulation Zone (CRZ) framework protects India’s coastal ecosystems by regulating development activities, ensuring environmental conservation and sustainable livelihoods under the Environment Protection Act, 1986.</p>
+        </div>
+        <!-- CRZ Overview -->
+        <div class="row g-4 mb-5">
+            <div class="col-12 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="card bg-white rounded shadow-sm p-4">
+                    <h3 class="text-primary mb-3">What is Coastal Regulation Zone?</h3>
+                    <p class="mb-0">The Coastal Regulation Zone (CRZ) refers to designated coastal areas governed by specific development rules under the Environment Protection Act, 1986. Its primary objective is to conserve the coastal environment, regulate activities along the coast, and safeguard the livelihoods of coastal communities while balancing ecological and economic needs.</p>
+                </div>
+            </div>
+        </div>
+        <!-- CRZ Categories -->
+        <div class="row g-4">
+            <div class="col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="crz-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-tree fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">CRZ-I: Ecologically Sensitive Areas</h4>
+                    </div>
+                    <p class="mb-0">Includes mangroves, coral reefs, and other ecologically sensitive zones where no new construction is permitted to protect biodiversity.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="crz-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-city fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">CRZ-II: Urban Coastal Areas</h4>
+                    </div>
+                    <p class="mb-0">Covers developed urban areas near the coast, where regulated construction is allowed following specific guidelines.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="crz-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-tractor fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">CRZ-III: Rural & Undeveloped Areas</h4>
+                    </div>
+                    <p class="mb-0">Encompasses rural and undeveloped coastal regions with restrictions on large-scale development to preserve natural landscapes.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="crz-card bg-white rounded shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-water fa-3x text-primary me-3"></i>
+                        <h4 class="mb-0">CRZ-IV: Territorial Waters</h4>
+                    </div>
+                    <p class="mb-0">Covers water areas up to 12 nautical miles, regulating activities to protect marine ecosystems and resources.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Coastal Regulation Zone End -->
+
+<!-- Fisheries Conclusion Start -->
+<div class="container-fluid fisheries-conclusion py-5 bg-light">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Conclusion</h4>
+            <h1 class="display-5 mb-4">The Future of India’s Fisheries Sector</h1>
+            <p class="mb-0">India’s fisheries sector stands as a model of sustainable growth, driven by robust policies, regulatory frameworks, and environmental stewardship, ensuring prosperity for fishers and ecosystems alike.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-10 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="card bg-white rounded shadow-sm p-5 position-relative overflow-hidden">
+                    <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(0,123,255,0.1) 0%, rgba(0,123,255,0.05) 100%);"></div>
+                    <div class="hero-content position-relative">
+                        <h2 class="text-primary mb-4">A Journey of Sustainable Progress</h2>
+                        <p class="lead mb-4">India’s fisheries sector has evolved through structured policies, regulatory acts, institutional support, and international cooperation. With central and state governments playing key roles, schemes like PMMSY and acts like the Coastal Aquaculture Authority Act ensure sustainable development and fisher welfare. Environmental safeguards under CRZ and landmark court rulings reinforce ecological responsibility. Together, these frameworks promote productivity, equity, and long-term sustainability in both inland and marine fisheries.</p>
+                        <div class="highlight-box bg-primary text-white rounded p-4 mt-4">
+                            <h4 class="mb-3">Key Pillars of Success</h4>
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-check-circle me-2"></i> Robust policies like PMMSY drive sustainable growth.
+                                </li>
+                                <li class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-check-circle me-2"></i> Regulatory acts ensure fisher welfare and resource conservation.
+                                </li>
+                                <li class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-check-circle me-2"></i> CRZ and court rulings uphold environmental responsibility.
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle me-2"></i> International cooperation enhances global best practices.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fisheries Conclusion End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body">BFSc Batch 2022</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-body">
+                       
+                       COFS CCSHAU , HISAR
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
